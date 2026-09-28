@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sami Motion Studio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="brand">Sami Motion Studio</div>
+        <div class="tagline">AI-ready motion graphics video creator</div>
+      </div>
+      <span class="status"><i></i> Free prototype</span>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">SAMI MAKES SENSE</p>
+        <h1>Turn your voiceover into a motion-graphics video.</h1>
+        <p class="hero-copy">Paste your script, choose your visual style, and build your scenes. This first version runs directly in your browser.</p>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="panel controls">
+        <h2>1. Your video</h2>
+        <label for="script">Voiceover / Script</label>
+        <textarea id="script" placeholder="Example: AI se freelancing mein paisa kaise aata hai?"></textarea>
+
+        <label for="style">Visual style</label>
+        <select id="style">
+          <option value="sami">Sami Makes Sense</option>
+          <option value="explainer">Modern Explainer</option>
+          <option value="minimal">Minimal Motion Graphics</option>
+        </select>
+
+        <label for="ratio">Aspect ratio</label>
+        <select id="ratio">
+          <option value="16:9">16:9 YouTube</option>
+          <option value="9:16">9:16 Shorts</option>
+        </select>
+
+        <button id="generate">Create Scenes</button>
+        <p class="note">No AI API is connected yet. This prototype creates editable motion scenes locally, so there are no generation credits.</p>
+      </div>
+
+      <div class="panel preview-panel">
+        <div class="preview-head">
+          <h2>2. Preview</h2>
+          <span id="sceneCount">0 scenes</span>
+        </div>
+        <div id="preview" class="preview">
+          <div class="empty">
+            <div class="empty-icon">✦</div>
+            <strong>Your video preview will appear here</strong>
+            <span>Enter a script and tap Create Scenes.</span>
+          </div>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
